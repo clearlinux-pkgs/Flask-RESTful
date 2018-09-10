@@ -5,3 +5,5 @@ pytz
 Flask
 aniso8601
 blinker
+python-mock
+pycrypto
