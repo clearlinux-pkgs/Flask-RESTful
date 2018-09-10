@@ -1,0 +1,7 @@
+# This file contains additional build requirements that did not get
+# picked up automatically. One name per line, no whitespace.
+six
+pytz
+Flask
+aniso8601
+blinker
