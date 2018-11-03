@@ -4,17 +4,16 @@
 #
 Name     : Flask-RESTful
 Version  : 0.3.6
-Release  : 2
+Release  : 3
 URL      : https://files.pythonhosted.org/packages/20/f1/14a62bba209ae189e5c5fa33d5e0b7a4b5969488fa71fd3b8b323860bfc8/Flask-RESTful-0.3.6.tar.gz
 Source0  : https://files.pythonhosted.org/packages/20/f1/14a62bba209ae189e5c5fa33d5e0b7a4b5969488fa71fd3b8b323860bfc8/Flask-RESTful-0.3.6.tar.gz
 Summary  : Simple framework for creating REST APIs
 Group    : Development/Tools
 License  : BSD-3-Clause
-Requires: Flask-RESTful-python3
-Requires: Flask-RESTful-license
-Requires: Flask-RESTful-python
+Requires: Flask-RESTful-license = %{version}-%{release}
+Requires: Flask-RESTful-python = %{version}-%{release}
+Requires: Flask-RESTful-python3 = %{version}-%{release}
 Requires: Flask
-Requires: Sphinx
 Requires: aniso8601
 Requires: blinker
 Requires: nose
@@ -48,7 +47,7 @@ license components for the Flask-RESTful package.
 %package python
 Summary: python components for the Flask-RESTful package.
 Group: Default
-Requires: Flask-RESTful-python3
+Requires: Flask-RESTful-python3 = %{version}-%{release}
 Provides: flask-restful-python
 
 %description python
@@ -72,14 +71,14 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1536553134
-python3 setup.py build -b py3
+export SOURCE_DATE_EPOCH=1541266114
+python3 setup.py build
 
 %install
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/doc/Flask-RESTful
-cp LICENSE %{buildroot}/usr/share/doc/Flask-RESTful/LICENSE
-python3 -tt setup.py build -b py3 install --root=%{buildroot}
+mkdir -p %{buildroot}/usr/share/package-licenses/Flask-RESTful
+cp LICENSE %{buildroot}/usr/share/package-licenses/Flask-RESTful/LICENSE
+python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
@@ -88,8 +87,8 @@ echo ----[ mark ]----
 %defattr(-,root,root,-)
 
 %files license
-%defattr(-,root,root,-)
-/usr/share/doc/Flask-RESTful/LICENSE
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/Flask-RESTful/LICENSE
 
 %files python
 %defattr(-,root,root,-)
