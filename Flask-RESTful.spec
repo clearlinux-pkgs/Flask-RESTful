@@ -4,7 +4,7 @@
 #
 Name     : Flask-RESTful
 Version  : 0.3.7
-Release  : 4
+Release  : 5
 URL      : https://files.pythonhosted.org/packages/2f/d6/4dca88aa42124fe372cf21a1fb004535615b09374c906e4e5d6ec114eccc/Flask-RESTful-0.3.7.tar.gz
 Source0  : https://files.pythonhosted.org/packages/2f/d6/4dca88aa42124fe372cf21a1fb004535615b09374c906e4e5d6ec114eccc/Flask-RESTful-0.3.7.tar.gz
 Summary  : Simple framework for creating REST APIs
@@ -72,7 +72,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1545241496
+export SOURCE_DATE_EPOCH=1545245180
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
