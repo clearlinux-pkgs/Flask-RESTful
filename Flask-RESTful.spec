@@ -4,7 +4,7 @@
 #
 Name     : Flask-RESTful
 Version  : 0.3.8
-Release  : 15
+Release  : 16
 URL      : https://files.pythonhosted.org/packages/67/65/84f3218666fc115497a13ff727f16d02374d07d1924cd4fd72e275294e8b/Flask-RESTful-0.3.8.tar.gz
 Source0  : https://files.pythonhosted.org/packages/67/65/84f3218666fc115497a13ff727f16d02374d07d1924cd4fd72e275294e8b/Flask-RESTful-0.3.8.tar.gz
 Summary  : Simple framework for creating REST APIs
@@ -55,6 +55,7 @@ python components for the Flask-RESTful package.
 Summary: python3 components for the Flask-RESTful package.
 Group: Default
 Requires: python3-core
+Provides: pypi(Flask-RESTful)
 
 %description python3
 python3 components for the Flask-RESTful package.
@@ -69,7 +70,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1581012145
+export SOURCE_DATE_EPOCH=1582924430
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
