@@ -4,7 +4,7 @@
 #
 Name     : Flask-RESTful
 Version  : 0.3.8
-Release  : 17
+Release  : 18
 URL      : https://files.pythonhosted.org/packages/67/65/84f3218666fc115497a13ff727f16d02374d07d1924cd4fd72e275294e8b/Flask-RESTful-0.3.8.tar.gz
 Source0  : https://files.pythonhosted.org/packages/67/65/84f3218666fc115497a13ff727f16d02374d07d1924cd4fd72e275294e8b/Flask-RESTful-0.3.8.tar.gz
 Summary  : Simple framework for creating REST APIs
@@ -67,18 +67,17 @@ python3 components for the Flask-RESTful package.
 
 %prep
 %setup -q -n Flask-RESTful-0.3.8
-cd %{_builddir}/Flask-RESTful-0.3.8
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1583518629
+export SOURCE_DATE_EPOCH=1586395172
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
-export FCFLAGS="$CFLAGS -fno-lto "
-export FFLAGS="$CFLAGS -fno-lto "
+export FCFLAGS="$FFLAGS -fno-lto "
+export FFLAGS="$FFLAGS -fno-lto "
 export CXXFLAGS="$CXXFLAGS -fno-lto "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
