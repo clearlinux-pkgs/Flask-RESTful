@@ -4,7 +4,7 @@
 #
 Name     : Flask-RESTful
 Version  : 0.3.8
-Release  : 18
+Release  : 19
 URL      : https://files.pythonhosted.org/packages/67/65/84f3218666fc115497a13ff727f16d02374d07d1924cd4fd72e275294e8b/Flask-RESTful-0.3.8.tar.gz
 Source0  : https://files.pythonhosted.org/packages/67/65/84f3218666fc115497a13ff727f16d02374d07d1924cd4fd72e275294e8b/Flask-RESTful-0.3.8.tar.gz
 Summary  : Simple framework for creating REST APIs
@@ -15,14 +15,12 @@ Requires: Flask-RESTful-python = %{version}-%{release}
 Requires: Flask-RESTful-python3 = %{version}-%{release}
 Requires: Flask
 Requires: aniso8601
-Requires: pycrypto
 Requires: pytz
 Requires: six
 BuildRequires : Flask
 BuildRequires : aniso8601
 BuildRequires : blinker
 BuildRequires : buildreq-distutils3
-BuildRequires : pycrypto
 BuildRequires : python-mock
 BuildRequires : pytz
 BuildRequires : six
@@ -73,7 +71,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1586395172
+export SOURCE_DATE_EPOCH=1586396727
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "

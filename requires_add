@@ -4,4 +4,3 @@ aniso8601
 Flask
 pytz
 six
-pycrypto
